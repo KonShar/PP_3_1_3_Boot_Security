@@ -20,26 +20,21 @@ public class User implements UserDetails {
     private int id;
 
 
-    @Size(min = 3, max = 100, message = "Names length should be from 2 to 100 characters")
     @Column(name = "name")
     private String name;
 
-    @Size(min = 3, max = 100, message = "Password length should be from 2 to 100 characters")
     @Column(name = "password")
     private String password;
 
-    @Size(min = 3, max = 100, message = "Surnames length should be from 2 to 100 characters")
     @Column(name = "surname")
     private String surname;
 
-    @Min(value = 1900, message = "Year of birth should be more than 1900")
     @Column(name = "year_of_birth")
     private int yearOfBirth;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Role> roles;
 
-    @NotEmpty(message = "Choose at least one role")
     public Set<Role> getRoles() {
         return roles;
     }
