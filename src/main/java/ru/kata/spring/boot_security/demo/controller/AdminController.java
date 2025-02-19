@@ -31,7 +31,7 @@ public class AdminController {
         return "admin/users";
     }
 
-    @GetMapping("new")
+    @GetMapping("/new")
     public String createNewUser(@ModelAttribute User user, Model model) {
         model.addAttribute("roles",roleService.getAllRoles());
         return "admin/new";

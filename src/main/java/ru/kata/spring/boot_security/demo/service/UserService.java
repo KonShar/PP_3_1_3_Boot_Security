@@ -9,13 +9,13 @@ public interface UserService {
 
     List<User> getAllUsers();
 
-    void saveUser(User user);
+    User saveUser(User user);
 
     User getUserById(int id);
 
     User getUserByName(String name);
 
-    void updateUser(int id, User user);
+    User updateUser(int id, User user);
 
     void deleteUser(int id);
 }
